@@ -6,11 +6,6 @@
     "dev": "bun run --hot src/index.ts",
     "start": "bun run src/index.ts",
     "lint": "eslint src",
-    "db:migrate": "npx prisma migrate deploy && npx prisma db push",
-    "db:studio": "npx prisma studio",
-    "migration:create": "npx prisma migrate dev --create-only",
-    "migration:auto": "npx prisma migrate dev",
-    "migration:reset": "npx prisma migrate reset",
     "prepare": "husky install"
   },
   "devDependencies": {
