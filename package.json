@@ -1,0 +1,42 @@
+{
+  "name": "bun-test",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --hot src/index.ts",
+    "start": "bun run src/index.ts",
+    "lint": "eslint src",
+    "db:migrate": "npx prisma migrate deploy && npx prisma db push",
+    "db:studio": "npx prisma studio",
+    "migration:create": "npx prisma migrate dev --create-only",
+    "migration:auto": "npx prisma migrate dev",
+    "migration:reset": "npx prisma migrate reset",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@types/http-errors": "^2.0.2",
+    "@types/module-alias": "^2.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
+    "bun-types": "^1.0.2",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prefer-arrow-functions": "^3.1.4",
+    "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.3",
+    "typescript": "5.1.5"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.1.8",
+    "hono": "^3.6.3",
+    "http-errors": "^2.0.0",
+    "module-alias": "^2.2.3",
+    "zod": "^3.22.2",
+    "zod-validation-error": "^1.5.0"
+  }
+}
